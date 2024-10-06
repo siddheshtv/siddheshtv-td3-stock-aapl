@@ -212,6 +212,8 @@ def train_td3_stock_prediction(stock_data, epochs=100, batch_size=256):
     action_dim = 1
     max_action = 1
 
+    print(f"State dimension: {state_dim}") 
+
     td3 = TD3(state_dim, action_dim, max_action)
     replay_buffer = ReplayBuffer(max_size=1e5)
 
